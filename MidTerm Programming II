@@ -1,0 +1,120 @@
+#Question 1
+print("*Question 1*")
+a = 16
+
+a = a // 2
+
+print(a**2)
+
+a = a + 11
+
+print(a+1)
+
+x = a - 3
+print(x)
+
+#Question 2
+print("*Question 2*")
+print((2+3)*6/2 and 18.0) 
+
+#Question 3
+print("*Question 3*")
+import datetime
+a = 3
+b = 4
+today = datetime.datetime.today()
+day_of_week = today.weekday()
+month_of_year = today.month
+a = a + day_of_week
+b += month_of_year
+ 
+print(a)
+print(b)
+c = a + b
+print(c)
+d = "abc" * (c//3)
+print(d)
+
+#Question 4
+print("*Question 4*")
+def palindrome(word):
+    if word == word[::-1]:
+        return True
+    else:
+        return False
+num1 = palindrome("7489617719749244646336564429479177169847")
+num2 = palindrome("6593036601359343374664733439531066303956")
+num3 = palindrome("8025833559061079503003059701609553385208")
+num4 = palindrome("5485839837501070045005400701057389385845")
+print(num1)
+print(num2)
+print(num3)
+print(num4)
+
+#Question 5
+print("*Question 5*")
+
+
+#Question 6
+print("*Question 6*")
+#I first created an "example list"
+example_list = [5,6,7,8,9]
+print(example_list)
+#The Changing of my example list proving mutability by adding an element
+example_list.append(13)
+print(example_list)
+print("notice the added 13, thus I changed the list by adding a new number")
+
+#Now I will create an example string to show that it cannot be changed 
+example_string = "This is a string"
+#Notice now if I try to add something an error will be returned
+#example_string.append(15)
+#To ensure the rest of my code runs I will make it a comment.
+
+
+#Question 7
+print("*Question 7*")
+import random
+random_numbers = []
+for i in range(10):
+    random_numbers.append(random.randint(1, 100))
+# continue here
+for i in range(len(random_numbers)):
+    if random_numbers[i] > 80:
+        random_numbers[i] = -random_numbers[i]
+print(random_numbers)
+
+#Question 8
+print("*Question 8*")
+from urllib.parse import urlparse
+def valid_url(url):
+    check_url = urlparse(url)
+    
+    if check_url.scheme and check_url.netloc:
+        return True
+    else:
+        return False
+
+url1 = "https://blackboard.ie.edu/ultra/courses/_79431_1/outline/assessment/_1281074_1/overview/attempt/_2470088_1?courseId=_79431_1"
+url2 = "https://blackboard.ie.edu/ultra/courses/_79431_1/outline"
+
+print(valid_url(url1))  
+print(valid_url(url2))  
+
+#Question 9
+print("*Question 9*")
+def since_birthday(birthday):
+    birth_year = int(birthday[-4:])
+    current_year = 2024
+    elapsed_years = current_year - birth_year - 1
+    days_passed = elapsed_years * 365
+    return days_passed
+
+birthday = "29-12-2003" 
+days_birthday = since_birthday(birthday)
+print("Since my birthday (not counting my birth year and current year) it has been:", days_birthday, "days")
+
+#Question 10
+print("*Question 10*")
+print("Uploading to Public Git Depository")
+
